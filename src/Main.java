@@ -32,20 +32,23 @@ public class Main {
 
             if(resultsTable != null) { //if the search has results
                 ArrayList<Element> deals = resultsTable.getElementsByClass("dealbox");
-                for (Element dealCard : deals) {
-                    ArrayList<Element> dealContents = dealCard.getElementsByClass("dealcontent");
-                    for (Element dealContent : dealContents) {
-                        System.out.print("Deal Title:\n" + dealContent.child(0).text());
-                        ArrayList<Element> expiredLabel = dealContent.getElementsByClass("colr_red xxsmall");
-                        if(!expiredLabel.isEmpty())
-                            System.out.println(" - Expired\n");
-                        else
-                            System.out.println("\n");
+                if(!deals.isEmpty()) {
+                    for (Element dealCard : deals) {
+                        ArrayList<Element> dealContents = dealCard.getElementsByClass("dealcontent");
+                        for (Element dealContent : dealContents) {
+                            System.out.print("Deal Title:\n" + dealContent.child(0).text());
+                            ArrayList<Element> expiredLabel = dealContent.getElementsByClass("colr_red xxsmall");
+                            if (!expiredLabel.isEmpty())
+                                System.out.println(" - Expired\n");
+                            else
+                                System.out.println("\n");
+                        }
                     }
                 }
+                else {
+                    System.out.println("There are no deals on " + keyword + " on dealsea.com");
+                }
             }
-            else
-                System.out.println("There are no deals on " + keyword);
         }
         catch(IOException e) {
             System.out.println(e.getMessage());
