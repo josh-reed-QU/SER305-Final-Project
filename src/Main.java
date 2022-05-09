@@ -3,11 +3,13 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import javax.swing.*;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import javax.swing.JFrame;
 
 /**
  *
@@ -16,7 +18,7 @@ import java.util.Scanner;
  *
  */
 
-public class Main {
+public class Main extends JFrame {
 
     public static String keyword; // user inputted search keyword
     public static int cycleTime; // user inputted cycle time
