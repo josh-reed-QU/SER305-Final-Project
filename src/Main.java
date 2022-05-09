@@ -23,6 +23,7 @@ public class Main {
     public static List<String> dealTitles; // list to hold the new and old deal titles
     public static int numResults; // number of search results
     public static int numPages; // number of results pages
+    public static int newDeals; // number of new deals
 
     public static void main(String[] args) throws IOException, InterruptedException{
         // TODO: swing pop up box to receive user input
@@ -60,7 +61,9 @@ public class Main {
              * TODO: does it need to be on a timer??? too many connection requests too fast???
              */
             // connects to the results page
+
             int currPage = 0;
+            newDeals = 0;
             while(currPage < numPages && currPage < 100) {
                 Document doc = Jsoup.connect("https://dealsea.com/search?n=" + currPage + "0&q=" + keyword).get();
 
@@ -71,7 +74,10 @@ public class Main {
                         // checks for expired label
                         Elements expiredLabels = deal.getElementsByClass("colr_red xxsmall");
                         if (expiredLabels.isEmpty()) { // if the deal is not expired
-                            dealTitles.add(dealText); // stores the deal's text
+                            if(!dealTitles.contains(dealText)) {
+                                newDeals++;
+                                dealTitles.add(dealText); // stores the deal's text
+                            }
                         }
                     }
                 }
@@ -81,8 +87,12 @@ public class Main {
                 if (!dealTitles.isEmpty()) { // if deals were found
                     System.out.println("Deals on " + keyword + " found on dealsea.com");
 
-                    for (String text : dealTitles) {
-                        System.out.println(text); //prints every deal's title
+                    if(dealTitles.size() != newDeals) {
+                        System.out.println("------------------------------------------");
+                    }
+
+                    for (int i = dealTitles.size() - newDeals; i < dealTitles.size(); i++) {
+                        System.out.println(dealTitles.get(i)); //prints every new deal's title
                     }
                 }
                 else {
