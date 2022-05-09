@@ -49,36 +49,40 @@ public class Main {
              * TODO: does it need to be on a timer??? too many connection requests too fast???
              */
             // connects to the results page
-            Document doc = Jsoup.connect("https://dealsea.com/search?n=0&q=" + keyword).get();
+            int currPage = 0;
+            while(currPage < numPages && currPage < 100) {
+                Document doc = Jsoup.connect("https://dealsea.com/search?n=" + currPage + "0&q=" + keyword).get();
 
-            Elements deals = doc.getElementsByClass("dealcontent");
-            if(!deals.isEmpty()) { // if the page has results
-                for (Element deal : deals) { // loops through every deal on the results page
-                    String dealText = deal.child(0).text();
-
-                    // checks for expired label
-                    Elements expiredLabels = deal.getElementsByClass("colr_red xxsmall");
-                    if(expiredLabels.isEmpty()) { // if the deal is not expired
-                        dealTitles.add(dealText); // stores the deal's text
+                Elements deals = doc.getElementsByClass("dealcontent");
+                if (!deals.isEmpty()) { // if the page has results
+                    for (Element deal : deals) { // loops through every deal on the results page
+                        String dealText = deal.child(0).text();
+                        // checks for expired label
+                        Elements expiredLabels = deal.getElementsByClass("colr_red xxsmall");
+                        if (expiredLabels.isEmpty()) { // if the deal is not expired
+                            dealTitles.add(dealText); // stores the deal's text
+                        }
                     }
                 }
-            }
-            if(!dealTitles.isEmpty()) { // if deals were found
-                System.out.println("Deals on " + keyword + " found on dealsea.com");
 
-                for(String text : dealTitles) {
-                    System.out.println(text); //prints every deal's title
+                currPage++;
+            }
+                if (!dealTitles.isEmpty()) { // if deals were found
+                    System.out.println("Deals on " + keyword + " found on dealsea.com");
+
+                    for (String text : dealTitles) {
+                        System.out.println(text); //prints every deal's title
+                    }
                 }
-            }
-            else {
-                System.out.println("No Deals on " + keyword + " found.");
-            }
+                else {
+                    System.out.println("No Deals on " + keyword + " found.");
+                }
+
         }
         catch(IOException e) {
             System.out.println(e.getMessage());
         }
     }
-
     public static void getSearchDetails(String keyword) {
         try {
             // connects to the results page
