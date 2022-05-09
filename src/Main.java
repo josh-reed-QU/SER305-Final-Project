@@ -24,19 +24,30 @@ public class Main {
     public static int numResults; // number of search results
     public static int numPages; // number of results pages
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, InterruptedException{
         // TODO: swing pop up box to receive user input
 
         // temporary user input
         System.out.print("Enter a keyword to search: ");
         Scanner userInput = new Scanner(System.in);
         keyword = userInput.nextLine();
+        System.out.println("Enter a time frequency in minutes");
+        cycleTime = userInput.nextInt();
 
         dealTitles = new ArrayList<>();
-        getSearchDetails(keyword);
-        System.out.println("Number of results: " + numResults +
-                ", Number of Pages: " + numPages); // Test Line; compare to website
-        findDeals(keyword);
+        int loopCount = 0;
+
+        // temp loop counter - possible have an option to quit program and run while that button isn't pressed
+        while(loopCount< 4){
+            getSearchDetails(keyword);
+            System.out.println("Number of results: " + numResults +
+                    ", Number of Pages: " + numPages); // Test Line; compare to website
+            findDeals(keyword);
+            Thread.sleep(cycleTime * 60000);
+
+            loopCount++;
+        }
+
 
         // TODO: swing pop up box with results
     }
