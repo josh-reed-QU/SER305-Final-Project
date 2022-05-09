@@ -25,7 +25,7 @@ public class Main {
     public static int numPages; // number of results pages
     public static int newDeals; // number of new deals
 
-    public static void main(String[] args) throws IOException, InterruptedException{
+    public static void main(String[] args) throws IOException, InterruptedException {
         // TODO: swing pop up box to receive user input
 
         // temporary user input
@@ -48,8 +48,6 @@ public class Main {
 
             loopCount++;
         }
-
-
         // TODO: swing pop up box with results
     }
 
