@@ -1,8 +1,9 @@
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
 
 public class SecondWindow extends JPanel {
-	public SecondWindow(String results ) throws InterruptedException {
+	public SecondWindow(ArrayList<String> results ) throws InterruptedException {
 		JFrame frame = new JFrame("Results");
 		JPanel resultPanel = new JPanel();
 		resultPanel.setBackground(Color.white);
@@ -11,7 +12,7 @@ public class SecondWindow extends JPanel {
 		JLabel resultLabel = new JLabel(results + " searching");
 		resultPanel.add(resultLabel, BorderLayout.NORTH);
 		frame.add(resultPanel);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
 		frame.setSize(420,420);
 		frame.setLayout(null);
 		frame.setVisible(true);

@@ -16,7 +16,7 @@ import java.util.TimerTask;
 public class HomeWindow extends JPanel {
 	public static String keyword; // user inputted search keyword
 	public static int cycleTime = 1; // user inputted cycle time
-	public static List<String> dealTitles; // list to hold the new and old deal titles
+	public static ArrayList<String> dealTitles; // list to hold the new and old deal titles
 	public static int numResults; // number of search results
 	public static int numPages; // number of results pages
 	public static int newDeals; // number of new deals
@@ -27,9 +27,9 @@ public class HomeWindow extends JPanel {
 			getSearchDetails(keyword);
 			System.out.println("Number of results: " + numResults +
 					", Number of Pages: " + numPages); // Test Line; compare to website
-			//findDeals(keyword);
+			findDeals(keyword);
 			try {
-				new SecondWindow(keyword + " searching!!!");
+				new SecondWindow(dealTitles);
 			} catch (InterruptedException e) {
 
 			}
@@ -81,12 +81,14 @@ public class HomeWindow extends JPanel {
 	}
 
 	public void run() throws InterruptedException {
-		dealTitles = new ArrayList<>();
+		dealTitles = new ArrayList<String>();
 		int loopCount = 0;
 		System.out.println("Running algorithm!, the deal is " + keyword);
 		java.util.Timer timer = new Timer();
 		TimerTask task = new Helper();
 		timer.schedule(task, 0, cycleTime * 60000);
+		//timer.schedule(task, 0, 20000);
+
 		loopCount++;
 	}
 
