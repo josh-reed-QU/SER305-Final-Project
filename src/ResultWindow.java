@@ -64,7 +64,7 @@ public class ResultWindow extends JPanel {
 		frame.add(resultPanel);
 		frame.setSize(800,600);
 		frame.setVisible(true);
-		System.out.println("set up done");
+		//System.out.println("set up done");
 	}
 
 

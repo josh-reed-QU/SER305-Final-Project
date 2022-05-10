@@ -25,8 +25,8 @@ public class HomeWindow extends JPanel {
 		@Override
 		public void run() {
 			getSearchDetails(keyword);
-			System.out.println("Number of results: " + numResults +
-					", Number of Pages: " + numPages); // Test Line; compare to website
+			// Test Line; compare to website
+			//System.out.println("Number of results: " + numResults + ", Number of Pages: " + numPages);
 			findDeals(keyword);
 			try {
 				new ResultWindow(dealTitles, newDeals, keyword);
@@ -83,7 +83,7 @@ public class HomeWindow extends JPanel {
 
 	public void run() throws InterruptedException {
 		dealTitles = new ArrayList<>();
-		System.out.println("Running algorithm!, the deal is " + keyword);
+		System.out.println("Running algorithm!, looking for deals on " + keyword);
 		java.util.Timer timer = new Timer();
 		TimerTask task = new Helper();
 		timer.schedule(task, 0, cycleTime * 60000L);
