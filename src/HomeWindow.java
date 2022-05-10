@@ -10,14 +10,31 @@ import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class HomeWindow extends JPanel {
 	public static String keyword; // user inputted search keyword
-	public static int cycleTime; // user inputted cycle time
+	public static int cycleTime = 1; // user inputted cycle time
 	public static List<String> dealTitles; // list to hold the new and old deal titles
 	public static int numResults; // number of search results
 	public static int numPages; // number of results pages
 	public static int newDeals; // number of new deals
+	class Helper extends TimerTask
+	{
+		@Override
+		public void run() {
+			getSearchDetails(keyword);
+			System.out.println("Number of results: " + numResults +
+					", Number of Pages: " + numPages); // Test Line; compare to website
+			//findDeals(keyword);
+			try {
+				new SecondWindow(keyword + " searching!!!");
+			} catch (InterruptedException e) {
+
+			}
+		}
+	}
 
 	public HomeWindow() {
 		super(new BorderLayout());
@@ -40,14 +57,16 @@ public class HomeWindow extends JPanel {
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
 				if (e.getSource() == submitButton) {
-					keyword = wordField.getText();
-					//time = timeField.getText();
-					try {
-						run();
-					} catch (InterruptedException ex) {
-						throw new RuntimeException(ex);
+					if(wordField.getText() != null && timeField.getText() != null){
+						keyword = wordField.getText();
+						cycleTime = Integer.parseInt(timeField.getText());
+						try {
+							run();
+						} catch (InterruptedException ex) {
+							throw new RuntimeException(ex);
+						}
 					}
-					System.out.println("in home, just passed " + keyword);
+					//System.out.println("in home, just passed " + keyword);
 				}
 			}
 		});
@@ -65,17 +84,10 @@ public class HomeWindow extends JPanel {
 		dealTitles = new ArrayList<>();
 		int loopCount = 0;
 		System.out.println("Running algorithm!, the deal is " + keyword);
-		cycleTime = 1;
-		while (loopCount < 2) {
-			getSearchDetails(keyword);
-			System.out.println("Number of results: " + numResults +
-					", Number of Pages: " + numPages); // Test Line; compare to website
-			//findDeals(keyword);
-			new SecondWindow(keyword + " searching!!!");
-			loopCount++;
-		}
-
-		// if results found - new SecondWindow(array for results
+		java.util.Timer timer = new Timer();
+		TimerTask task = new Helper();
+		timer.schedule(task, 0, cycleTime * 60000);
+		loopCount++;
 	}
 
 	public static void findDeals(String keyword) {
