@@ -1,0 +1,71 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"3e95f57c-08fb-4b7b-bc2b-ebfff3c70745\" name=\"Default Changelist\" comment=\"Initial Commit - Empty Project - J.R\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/libraries/jsoup_1_14_3.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/libraries/jsoup_1_14_3.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/runConfigurations.xml\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/out/production/SER305FinalProject/Main.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/out/production/SER305FinalProject/Main.class\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/Main.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/Main.java\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"GitSEFilterConfiguration\">\n    <file-type-list>\n      <filtered-out-file-type name=\"LOCAL_BRANCH\" />\n      <filtered-out-file-type name=\"REMOTE_BRANCH\" />\n      <filtered-out-file-type name=\"TAG\" />\n      <filtered-out-file-type name=\"COMMIT_BY_MESSAGE\" />\n    </file-type-list>\n  </component>\n  <component name=\"ProjectId\" id=\"287VbmwnsoCWqnPUXQ2OXJ8PrgN\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"last_opened_file_path\": \"C:/Downloads/jsoup-1.14.3.jar\",\n    \"project.structure.last.edited\": \"Libraries\",\n    \"project.structure.proportion\": \"0.15\",\n    \"project.structure.side.proportion\": \"0.2\"\n  }\n}]]></component>\n  <component name=\"RunManager\">\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"Main\" />\n      <module name=\"SER305FinalProject\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"Application.Main\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"SvnConfiguration\">\n    <configuration />\n  </component>\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"3e95f57c-08fb-4b7b-bc2b-ebfff3c70745\" name=\"Default Changelist\" comment=\"\" />\n      <created>1650567684037</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1650567684037</updated>\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"Initial Commit - Empty Project - J.R\">\n      <created>1650568663866</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1650568663866</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"JSoup Test Class - Josh\">\n      <created>1651018610749</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1651018610750</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"Basic Deal Finder\">\n      <created>1651604616224</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1651604616224</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"4\" />\n    <servers />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"Initial Commit - Empty Project - J.R\" />\n    <MESSAGE value=\"JSoup Test Class - Josh\" />\n    <MESSAGE value=\"Basic Deal Finder\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Basic Deal Finder\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 5931b5bc5fcab497b2c841103923bcea3d5c96c3)
++++ b/.idea/workspace.xml	(date 1652057697929)
+@@ -1,12 +1,9 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ChangeListManager">
+-    <list default="true" id="3e95f57c-08fb-4b7b-bc2b-ebfff3c70745" name="Default Changelist" comment="Initial Commit - Empty Project - J.R">
++    <list default="true" id="3e95f57c-08fb-4b7b-bc2b-ebfff3c70745" name="Default Changelist" comment="Basic Deal Finder">
+       <change beforePath="$PROJECT_DIR$/.idea/libraries/jsoup_1_14_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/jsoup_1_14_3.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/out/production/SER305FinalProject/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SER305FinalProject/Main.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -37,14 +34,11 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "last_opened_file_path": "C:/Downloads/jsoup-1.14.3.jar",
+-    "project.structure.last.edited": "Libraries",
+-    "project.structure.proportion": "0.15",
+-    "project.structure.side.proportion": "0.2"
+-  }
+-}]]></component>
++  <component name="PropertiesComponent">
++    <property name="project.structure.last.edited" value="Libraries" />
++    <property name="project.structure.proportion" value="0.15" />
++    <property name="project.structure.side.proportion" value="0.2" />
++  </component>
+   <component name="RunManager">
+     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+       <option name="MAIN_CLASS_NAME" value="Main" />
+@@ -105,6 +99,7 @@
+         </entry>
+       </map>
+     </option>
++    <option name="oldMeFiltersMigrated" value="true" />
+   </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="Initial Commit - Empty Project - J.R" />
+Index: .idea/libraries/jsoup_1_14_3.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><component name=\"libraryTable\">\n  <library name=\"jsoup-1.14.3\">\n    <CLASSES>\n      <root url=\"jar://$PROJECT_DIR$/../../../../Downloads/jsoup-1.14.3.jar!/\" />\n    </CLASSES>\n    <JAVADOC />\n    <SOURCES />\n  </library>\n</component>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/libraries/jsoup_1_14_3.xml b/.idea/libraries/jsoup_1_14_3.xml
+--- a/.idea/libraries/jsoup_1_14_3.xml	(revision 5931b5bc5fcab497b2c841103923bcea3d5c96c3)
++++ b/.idea/libraries/jsoup_1_14_3.xml	(date 1652057076272)
+@@ -1,7 +1,7 @@
+ <component name="libraryTable">
+   <library name="jsoup-1.14.3">
+     <CLASSES>
+-      <root url="jar://$PROJECT_DIR$/../../../../Downloads/jsoup-1.14.3.jar!/" />
++      <root url="jar://$USER_HOME$/Desktop/jsoup-1.14.3.jar!/" />
+     </CLASSES>
+     <JAVADOC />
+     <SOURCES />

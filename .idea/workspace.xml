@@ -2,9 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e95f57c-08fb-4b7b-bc2b-ebfff3c70745" name="Default Changelist" comment="Final Version">
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_8_22,_8_41_PM_[Default_Changelist]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_8_22,_8_41_PM_[Default_Changelist]1/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_8_22__8_41_PM__Default_Changelist_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_9_22,_8_35_PM_[Default_Changelist]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_9_22,_8_36_PM_[Default_Changelist]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_9_22__8_35_PM__Default_Changelist_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_9_22__8_36_PM__Default_Changelist_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/SER305FinalProject/App.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/SER305FinalProject/HomeWindow$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/SER305FinalProject/HomeWindow$Helper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/SER305FinalProject/HomeWindow.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/SER305FinalProject/ResultWindow$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/SER305FinalProject/ResultWindow.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HomeWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HomeWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ResultWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ResultWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652152089859</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Final Version">
+      <created>1652153286953</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1652153286953</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

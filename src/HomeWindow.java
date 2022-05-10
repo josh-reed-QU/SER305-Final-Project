@@ -20,6 +20,8 @@ public class HomeWindow extends JPanel {
 	public static int numPages; // number of results pages
 	public static int newDeals; // number of new deals
 
+	public static int pageLimit = 20;
+
 	class Helper extends TimerTask
 	{
 		@Override
@@ -28,6 +30,7 @@ public class HomeWindow extends JPanel {
 			// Test Line; compare to website
 			//System.out.println("Number of results: " + numResults + ", Number of Pages: " + numPages);
 			findDeals(keyword);
+			pageLimit *= 2;
 			try {
 				new ResultWindow(dealTitles, newDeals, keyword);
 			}
@@ -86,13 +89,13 @@ public class HomeWindow extends JPanel {
 		System.out.println("Running algorithm!, looking for deals on " + keyword);
 		java.util.Timer timer = new Timer();
 		TimerTask task = new Helper();
-		timer.schedule(task, 0, cycleTime * 60000L);
-		//timer.schedule(task, 0, 20000);
+		//timer.schedule(task, 0, cycleTime * 60000L);
+		timer.schedule(task, 0, 20000);
 	}
 
 	public static void findDeals(String keyword) {
 		try {
-			int pageLimit = 100; // Prevents user from making too many connection requests
+			//int pageLimit = 100; // Prevents user from making too many connection requests
 			int currPage = 0;
 			newDeals = 0;
 			while (currPage < numPages && currPage < pageLimit) {
