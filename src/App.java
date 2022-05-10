@@ -1,7 +1,11 @@
 import javax.swing.*;
 
-//import com.sun.org.apache.xerces.internal.impl.dv.util.Base64;
-
+/**
+ *
+ * SER305 - Final Project - Deals App
+ * By: Josh Reed, Maddie Badalamente, Jake Conrad, Sadjell Mamon, Sammi Spinner
+ *
+ */
 
 public class App extends JFrame{
 
@@ -19,4 +23,5 @@ public class App extends JFrame{
        // System.out.println("making new app!");
         new App();
     }
+
 }

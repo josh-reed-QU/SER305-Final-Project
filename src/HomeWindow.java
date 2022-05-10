@@ -9,7 +9,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -20,6 +19,7 @@ public class HomeWindow extends JPanel {
 	public static int numResults; // number of search results
 	public static int numPages; // number of results pages
 	public static int newDeals; // number of new deals
+
 	class Helper extends TimerTask
 	{
 		@Override
@@ -29,9 +29,10 @@ public class HomeWindow extends JPanel {
 					", Number of Pages: " + numPages); // Test Line; compare to website
 			findDeals(keyword);
 			try {
-				new SecondWindow(dealTitles);
-			} catch (InterruptedException e) {
-
+				new ResultWindow(dealTitles, newDeals, keyword);
+			}
+			catch (InterruptedException e) {
+				System.out.println(e.getMessage());
 			}
 		}
 	}
@@ -39,8 +40,8 @@ public class HomeWindow extends JPanel {
 	public HomeWindow() {
 		super(new BorderLayout());
 		this.setBackground(Color.white);
-		this.setPreferredSize(new Dimension(500, 500));
-		this.setSize(new Dimension(500, 500));
+		this.setPreferredSize(new Dimension(800, 600));
+		this.setSize(new Dimension(800, 600));
 
 		JLabel welcomeLabel = new JLabel("Welcome to Dealsea!!! Discover Amazing Deals!!!");
 		this.add(welcomeLabel, BorderLayout.NORTH);
@@ -57,7 +58,7 @@ public class HomeWindow extends JPanel {
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
 				if (e.getSource() == submitButton) {
-					if(wordField.getText() != null && timeField.getText() != null){
+					if(!wordField.getText().equals("") && !timeField.getText().equals("")) {
 						keyword = wordField.getText();
 						cycleTime = Integer.parseInt(timeField.getText());
 						try {
@@ -81,29 +82,20 @@ public class HomeWindow extends JPanel {
 	}
 
 	public void run() throws InterruptedException {
-		dealTitles = new ArrayList<String>();
-		int loopCount = 0;
+		dealTitles = new ArrayList<>();
 		System.out.println("Running algorithm!, the deal is " + keyword);
 		java.util.Timer timer = new Timer();
 		TimerTask task = new Helper();
-		timer.schedule(task, 0, cycleTime * 60000);
+		timer.schedule(task, 0, cycleTime * 60000L);
 		//timer.schedule(task, 0, 20000);
-
-		loopCount++;
 	}
 
 	public static void findDeals(String keyword) {
 		try {
-			/*
-			 * TODO: loop from 0 to numPages connecting to every results page
-			 *
-			 * TODO: does it need to be on a timer??? too many connection requests too fast???
-			 */
-			// connects to the results page
-
+			int pageLimit = 100; // Prevents user from making too many connection requests
 			int currPage = 0;
 			newDeals = 0;
-			while (currPage < numPages && currPage < 100) {
+			while (currPage < numPages && currPage < pageLimit) {
 				Document doc = Jsoup.connect("https://dealsea.com/search?n=" + currPage + "0&q=" + keyword).get();
 
 				Elements deals = doc.getElementsByClass("dealcontent");
@@ -120,23 +112,8 @@ public class HomeWindow extends JPanel {
 						}
 					}
 				}
-
 				currPage++;
 			}
-			if (!dealTitles.isEmpty()) { // if deals were found
-				System.out.println("Deals on " + keyword + " found on dealsea.com");
-
-				if (dealTitles.size() != newDeals) {
-					System.out.println("------------------------------------------");
-				}
-
-				for (int i = dealTitles.size() - newDeals; i < dealTitles.size(); i++) {
-					System.out.println(dealTitles.get(i)); //prints every new deal's title
-				}
-			} else {
-				System.out.println("No Deals on " + keyword + " found.");
-			}
-
 		} catch (IOException e) {
 			System.out.println(e.getMessage());
 		}
@@ -167,4 +144,6 @@ public class HomeWindow extends JPanel {
 		}
 
 	}
+
+
 }
